@@ -174,15 +174,15 @@ export default function Collections() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50">
       <nav className="bg-white shadow-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="bg-gradient-to-br from-amber-500 to-orange-600 p-2 rounded-lg">
+              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-2 rounded-lg">
                 <Image className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-2xl font-bold ml-3 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold ml-3 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                 FrameIt
               </h1>
             </div>
@@ -190,7 +190,7 @@ export default function Collections() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setIsUploadModalOpen(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all"
               >
                 <Upload className="w-4 h-4" />
                 Upload
@@ -198,7 +198,7 @@ export default function Collections() {
               <div className="relative" ref={profileRef}>
                 <button
                   onClick={() => setProfileOpen((prev) => !prev)}
-                  className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-md bg-gradient-to-br from-orange-500 to-rose-500 text-white font-semibold flex items-center justify-center"
+                  className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-md bg-gradient-to-br from-emerald-500 to-teal-500 text-white font-semibold flex items-center justify-center"
                   title="View profile"
                 >
                   {user?.username ? user.username.charAt(0).toUpperCase() : '?'}
@@ -207,7 +207,7 @@ export default function Collections() {
                 {profileOpen && (
                   <div className="absolute right-0 mt-3 w-72 bg-white border border-gray-100 rounded-2xl shadow-2xl p-4 z-50">
                     <div className="flex items-center gap-3 border-b border-gray-100 pb-3">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-rose-500 text-white font-bold flex items-center justify-center text-lg">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 text-white font-bold flex items-center justify-center text-lg">
                         {user?.username ? user.username.charAt(0).toUpperCase() : '?'}
                       </div>
                       <div className="flex-1">
@@ -220,7 +220,7 @@ export default function Collections() {
                       <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">
                         Total Likes
                       </p>
-                      <p className="text-3xl font-bold text-orange-600">
+                      <p className="text-3xl font-bold text-emerald-600">
                         {statsLoading ? '...' : totalLikes}
                       </p>
                       {statsError && (
@@ -244,7 +244,7 @@ export default function Collections() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold text-gray-800 mb-2">
+          <h2 className="text-4xl font-bold text-gray-900 mb-2">
             Your Collections
           </h2>
           <p className="text-gray-600">
@@ -263,8 +263,8 @@ export default function Collections() {
               onClick={() => handleFilterChange(filter.value)}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${
                 filterType === filter.value
-                  ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 border border-gray-200 hover:border-orange-500'
+                  ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 border border-gray-200 hover:border-emerald-500'
               }`}
             >
               {filter.label}
@@ -291,7 +291,7 @@ export default function Collections() {
             <div className="mt-8 flex justify-center">
               <button
                 onClick={handleLoadMore}
-                className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-medium hover:shadow-lg transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg transition-all"
               >
                 Load More Images
               </button>
